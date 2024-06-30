@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://kit.fontawesome.com/6f3ab1da39.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="input-wrapper">
+        <input
+          type="search"
+          name="cerca"
+          id="c"
+          placeholder="Inserisci città..."
+          autocomplete="false"
+        />
+        <div id="autocomplete-list" class="autocomplete-items"></div>
+
+          <img id="searchButton"
+            width="30"
+            height="30"
+            src="https://img.icons8.com/ios-filled/100/5f8784/search--v1.png"
+            alt="search--v1"
+          />
+        </button>
+      </div>
+      <div class="city-info">
+        <div class="left-content">
+            <div class="weather-icon"></div>
+
+          <h1 id="cityName"></h1>
+          <p>Temp: <span id="cityTemp"></span></p>
+        </div>
+        <div class="right-content">
+          <!-- Le previsioni meteo verranno inserite qui -->
+      </div>
+      </div>
+      <div class="second-wrapper">
+        <div class="forecast">
+          <table>
+            <tr class="time">
+             
+            </tr>
+            <tr class="temp">
+             
+            </tr>
+            <tr class="iconweather">
+            
+            </tr>
+            <tr class="humidity">
+             
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="graphs">
+    
+
+        <div class="graf grafico-temperatura">
+            <canvas id="temperature-chart" width="400" height="200"></canvas>
+        </div>
+        <div class="graf grafico-umidita">
+            <canvas id="humidity-chart" width="400" height="200"></canvas>
+        </div>
+        <div class="graf grafico-pressione">
+            <canvas id="pressure-chart" width="400" height="200"></canvas>
+        </div>
+        <div class="graf grafico-vento">
+            <canvas id="wind-speed-chart" width="400" height="200"></canvas>
+        </div>
+    </div>
+    <div id="activities">
+      <h2>Attività Consigliate</h2>
+      <div class="accordion" id="gardening-accordion">
+          <div class="accordion-header">
+              <i class="fas fa-seedling activity-icon"></i>
+              Gardening
+          </div>
+          <div class="accordion-content">
+              <canvas id="gardening-chart" width="400" height="200"></canvas>
+          </div>
+      </div>
+      <div class="accordion" id="running-accordion">
+          <div class="accordion-header">
+              <i class="fas fa-running activity-icon"></i>
+              Running
+          </div>
+          <div class="accordion-content">
+              <canvas id="running-chart" width="400" height="200"></canvas>
+          </div>
+      </div>
+      <div class="accordion" id="cycling-accordion">
+          <div class="accordion-header">
+              <i class="fas fa-bicycle activity-icon"></i>
+              Cycling
+          </div>
+          <div class="accordion-content">
+              <canvas id="cycling-chart" width="400" height="200"></canvas>
+          </div>
+      </div>
+      <!-- Aggiungi altre attività -->
+  </div>
+</div>
+</div>
+</div>
+    </div>
+    <script src="activity.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
